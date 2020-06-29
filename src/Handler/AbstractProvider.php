@@ -275,6 +275,29 @@ abstract class AbstractProvider
     }
 
     /**
+     * Set the scopes of the requested access.
+     *
+     * @param  array|string  $scopes
+     * @return $this
+     */
+    public function setScopes($scopes)
+    {
+        $this->scopes = array_unique((array) $scopes);
+
+        return $this;
+    }
+
+    /**
+     * Get the current scopes.
+     *
+     * @return array
+     */
+    public function getScopes()
+    {
+        return $this->scopes;
+    }
+
+    /**
      * Returns authorization parameters based on provided options.
      *
      * @param  array $options
@@ -287,7 +310,8 @@ abstract class AbstractProvider
         }
 
         if (empty($options['scope'])) {
-            $options['scope'] = $this->getDefaultScopes();
+            $scopes = $this->getScopes();
+            $options['scope'] = empty($scopes) ? $this->getDefaultScopes() : $scopes;
         }
 
         $options += [
