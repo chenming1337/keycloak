@@ -1,5 +1,5 @@
 {
-    "name": "avdevs/keycloak",
+    "name": "chenming1337/keycloak",
     "description": "Keycloak OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
     "authors": [{
