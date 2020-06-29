@@ -2,8 +2,8 @@
 
 ### Installation
 ```
-    clone : git clone https://github.com/avdevs/keycloak.git
-    installing package : composer require avdevs/keycloak
+    clone : git clone https://github.com/chenming1337/keycloak.git
+    installing package : composer require chenming1337/keycloak
 ```
 
 ### Requirements
